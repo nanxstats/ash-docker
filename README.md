@@ -14,7 +14,7 @@ The Docker image is built mostly based on
 
         docker pull road2stat/ash-docker
 
-### Reproduce the simulation studies
+## Reproduce the simulation studies
 
 Run `make` under `code/` and make output files available in host:
 
@@ -22,7 +22,7 @@ Run `make` under `code/` and make output files available in host:
 
 Note running this will take hours.
 
-### Reproduce the analysis interactively
+## Reproduce the analysis interactively
 
         docker run -d -p 8787:8787 --name ash road2stat/ash-docker
 
