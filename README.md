@@ -37,6 +37,6 @@ documents in the `analysis/` directory, or run `system("make")`.
         docker stop ash
         docker rm ash
 
-* To remove the `ash` image:
+* To remove the `ash-docker` image:
 
         docker rmi road2stat/ash-docker
