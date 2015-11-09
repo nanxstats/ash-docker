@@ -9,7 +9,7 @@ RUN  rm -f /var/lib/dpkg/available \
     libxml2-dev \
     libssh2-1-dev
 
-# TeXLive + inconsolata fonts from rocker/hadleyverse
+# TeXLive + Inconsolata font from rocker/hadleyverse
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     aspell \
