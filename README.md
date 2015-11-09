@@ -16,11 +16,15 @@ The Docker image is built mostly based on
 
 ## Reproduce the simulation studies
 
-Run `make` under `code/` and make output files available in host:
+Run `make` to generate simulation data, analysis, the paper, and make them available in host:
 
-        docker run -v /home/rstudio/output:/home/hostusername/output --name ash road2stat/ash-docker cd code && make
+        cd /home/user/
+        mkdir ash-docker-share
+        docker run -v /home/rstudio/:/home/user/ash-docker-share --name ash road2stat/ash-docker make
 
-Note running this will take hours.
+> Note 1: Replace `user` with your system user name.
+
+> Note 2: running this will take hours.
 
 ## Reproduce the analysis interactively
 
@@ -28,7 +32,7 @@ Note running this will take hours.
 
 * Go to [http://localhost:8787](http://localhost:8787), use `rstudio`/`rstudio`
 to log in to the RStudio Server. Compile and interact with the R Markdown
-documents in the `analysis/` directory, or run `system("make")`.
+documents in the `analysis/` directory.
 
 ## Cleaning
 
