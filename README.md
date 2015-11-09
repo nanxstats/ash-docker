@@ -1,30 +1,30 @@
 # ash-docker
 
-ash-docker provides a Docker image for reproducing the analysis of the
-[ash](https://github.com/stephens999/ash/) project, and an production-ready
-environment for running [ashr](https://github.com/stephens999/ashr/).
-The Docker image is built mostly based on
+`ash-docker` provides a Docker image for reproducing the simulation, analysis,
+and paper of the [ash](https://github.com/stephens999/ash/) project,
+It is also a production-ready environment for running [ashr](https://github.com/stephens999/ashr/).
+The Docker image is built on
 [ash-packrat](https://github.com/stephenslab/ash-packrat).
 
-## Install
+## Installation
 
 * [Install Docker](https://docs.docker.com/installation/).
 
-* Download the ash-docker Docker image and run a container named `ash`:
+* Download the `ash-docker` image and run a container named `ash`:
 
         docker pull road2stat/ash-docker
 
-## Reproduce the simulation studies
+## Reproduce the simulation studies, analysis, and paper
 
-Run `make` to generate simulation data, analysis, the paper, and make them available in host:
+Run `make` to generate the simulation results, analysis, paper, and make them available in a folder accessible from the host:
 
         cd /home/user/
         mkdir ash-docker-share
         docker run -v /home/rstudio/:/home/user/ash-docker-share --name ash road2stat/ash-docker make
 
-> Note 1: Replace `user` with your system user name.
+> Note 1: replace `user` with your system user name.
 
-> Note 2: running this will take hours.
+> Note 2: running this will take several hours.
 
 ## Reproduce the analysis interactively
 
@@ -34,7 +34,7 @@ Run `make` to generate simulation data, analysis, the paper, and make them avail
 to log in to the RStudio Server. Compile and interact with the R Markdown
 documents in the `analysis/` directory.
 
-## Cleaning
+## Clean Up
 
 * To stop and remove the running container `ash`:
 
